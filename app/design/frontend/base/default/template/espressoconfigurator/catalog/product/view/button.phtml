@@ -1,0 +1,152 @@
+<?php
+
+
+$currentCustomization = $this->getCurrentCustomization();
+
+?>
+
+<script type="text/javascript">
+    /* variables for script */
+    var espcTextPlaceholderText = "<?php echo ($this->getPlaceholderText()); ?>";
+
+    var espcTextCustomizeIt = "<?php echo ($this->__("Customize it")); ?>";
+    var espcTextChangeCustomization = "<?php echo ($this->__("Change Customization")); ?>";
+
+    var espcTextBeforeBtn0 = "<?php echo ($this->getTextBeforeBtn(0)); ?>";
+    var espcTextBeforeBtn1 = "<?php echo ($this->getTextBeforeBtn(1)); ?>";
+
+    // var selectedFontText = "DIN-Condensed";
+    <? if ($currentCustomization): {?>
+        var userHasCustomized = true;
+    <? } else: ?>
+        var userHasCustomized = false;
+    <? endif ?>
+</script>
+
+<? if ( $this->isProductCustomizable() ): ?>
+    <? 
+    $localeCode = Mage::app()->getStore()->getLocaleCode();
+    echo "<!-- locale code: $localeCode -->";
+
+        
+    ?>
+
+    <?php echo $this->getChildHtml('esp_configurator_styles'); ?>
+
+    <div id="product-customization-before-btn">
+        <? if (!($currentCustomization)): {?>
+            <div id="product-customization-before-btn-text"><?php echo ($this->getTextBeforeBtn(0)); ?></div>
+            <ul style="display:none;">
+                <li><dt><?php echo ($this->__("Your label")); ?>: </dt><dd id="espc-dd-customization-text"></dd></li>
+
+                <?php if ($this->getFontTitles()) : ?>
+                    <li><dt><?php echo ($this->__("Font")); ?>: </dt><dd id="espc-dd-customization-font"></dd></li>
+                <? endif; ?>
+                <?php if ($this->getFontColors()) : ?>
+                    <li><dt><?php echo ($this->__("Color")); ?>: </dt><dd id="espc-dd-customization-color"></dd></li>
+                <? endif; ?>
+
+            </ul>
+        <? } else: ?>
+            <div id="product-customization-before-btn-text"><?php echo ($this->getTextBeforeBtn(1)); ?></div>
+            <ul>
+                <li><dt><?php echo ($this->__("Your label")); ?>: </dt><dd id="espc-dd-customization-text"><?php echo ($currentCustomization['text']); ?></dd></li>
+
+                <?php if ($this->getFontTitles()) : ?>
+                    <li><dt><?php echo ($this->__("Font")); ?>: </dt><dd id="espc-dd-customization-font"><?php echo ($currentCustomization['font']); ?></dd></li>
+                <? endif; ?>
+                <?php if ($this->getFontColors()) : ?>
+                    <li><dt><?php echo ($this->__("Color")); ?>: </dt><dd id="espc-dd-customization-color"><?php echo ($currentCustomization['color']); ?></dd></li>
+                <? endif; ?>
+
+            </ul>
+        <? endif ?>
+    </div>
+    <div class="product-customization-btn-wrapper">
+        <button type="button" title="<?php echo ($this->btnText[1]) ?>" id="product-customize-it" class="button" onclick="openConfigurator();">
+            <span><?php echo ( (!($currentCustomization)) ? $this->btnText[0]  : $this->btnText[1] ) ; ?></span>
+        </button>
+    </div>
+
+    <?  ?>
+
+    <div id="esp-configurator-bg" style="display:none">
+        <!--Product Configurator Background-->
+        <div id="esp-configurator-bg-dark-overlay"></div>
+
+        <div id="esp-configurator-outer-wrapper" style="display:none">
+            <!--Product Configurator Outer Wrapper-->
+            <div id="esp-configurator-inner-wrapper">
+                <div id="esp-configurator-upper-title">
+                    <?php echo($this->getCustomizationTitle()); ?>
+                    <a id="esp-close-btn" onclick="closeConfigurator();">X</a>
+                </div>
+                <div id="esp-configurator-inner-content">
+
+                    <!--Product Configurator Inner Wrapper-->
+                    <div class="esp-configurator-img-bg" style="background-image: url(<? echo($this->getCustomizationImageUrl()) ?>);">
+                        <div id="esp-configurator-text" class="font-<?php echo ($this->getDefaultFontSku()); ?> color-<?php echo ($this->getDefaultColorSku()); ?>" >
+                            <?php echo ($this->getPlaceholderText()); ?>
+                        </div>
+
+                    </div>
+                    <div class="esp-configurator-controls">
+                        <div class="customization-labels-div"><label id="input-text-label" for="input-text" class="customization-labels"><?php echo ($this->ConfiguratorTextBeforeInput); ?></label></div>
+                        <?  ?>
+                        <?  ?>
+                        <input id="input-text" value="<?php echo ($this->getPlaceholderText()); ?>"  maxlength="<?php echo($this->getInputMaxCharacters()) ?>" ><br />
+                        <div class="esp-below-input"><span id="esp-validation-msg"><?php echo ($this->__("This field is required")); ?></span> <span>(max. <?php echo($this->getInputMaxCharacters()) ?> <?php echo ($this->__("characters")); ?>)</span></div>
+
+<!--                        <div class="customization-labels-div"><label class="customization-labels">--><?php ?><!--</label></div>-->
+                        <? if ($myFonts = $this->getFontTitles() ): {?>
+                        <div>
+                            <fieldset class="esp-font">
+                                <ul>
+                                    <? foreach ($myFonts as $fontKey => $fontData): ?>
+                                        <li>
+                                            <input type="radio" id="esp-font-id-<? echo ($fontKey) ?>" name="esp-radioBtn-font" value="font-picker-value-<? echo ($fontData['sku']) ?>" <? if ($this->getDefaultFontSku() == $fontData['sku']) { echo ("checked"); }; ?>>
+                                            <label title="<?php echo ($this->__("Choose font")); ?>" for="esp-font-id-<? echo ($fontKey) ?>" class="font-picker-label-<? echo ($fontData['sku']) ?>">
+                                                <div><? echo ("ABC") ?></div>
+                                            </label>
+                                        </li>
+                                    <? endforeach ?>
+                                </ul>
+                            </fieldset>
+                        </div>
+                        <? } endif ?>
+
+<!--                        <div><label class="customization-labels">--><?php ?><!--</label></div>-->
+                        <? if ( $myColors = $this->getFontColors() ): {?>
+                        <div>
+                            <fieldset class="esp-font-colors">
+                                <ul>
+                                    <? foreach ($myColors as $colorKey => $colorData): ?>
+                                        <li>
+                                            <input type="radio" id="esp-color-id-<? echo ($colorKey) ?>" name="esp-radioBtn-color" value="color-picker-value-<? echo ($colorData['sku']) ?>" <? if ($this->getDefaultColorSku() == $colorData['sku']) { echo ("checked"); }; ?>>
+                                            <label title="<?php echo ($this->__("Choose color")); ?>" for="esp-color-id-<? echo ($colorKey) ?>" class="color-picker-label-<? echo ($colorData['sku']) ?>"
+                                                style="background-color: <? echo ($colorData['hex']) ?>" >
+                                                <div></div>
+                                            </label>
+                                        </li>
+                                    <? endforeach ?>
+                                </ul>
+                            </fieldset>
+                        </div>
+                        <? } endif ?>
+
+                    </div>
+
+                    <div style="clear:both;"></div>
+
+                    <div class="esp-configurator-buttons">
+                        <button type="button" title="<? echo $this->ConfiguratorBtnTextDone ?>" id="product-customize-done" class="button" onclick="saveAndCloseConfigurator();"><span><? echo $this->ConfiguratorBtnTextDone ?></span></button>
+                        <button type="button" title="<? echo $this->ConfiguratorBtnTextReset ?>" id="product-customize-reset" class="button" onclick="resetConfigurator();"><span><? echo $this->ConfiguratorBtnTextReset ?></span></button>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<? endif ?>

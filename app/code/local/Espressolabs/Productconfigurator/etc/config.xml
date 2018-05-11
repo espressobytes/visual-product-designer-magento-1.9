@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+
+<config>
+
+    <modules>
+        <Espressolabs_Productconfigurator>
+            <version>1.0.0.0</version>
+        </Espressolabs_Productconfigurator>
+    </modules>
+
+    <frontend>
+        <routers>
+            <espressoconfigurator>
+                <use>standard</use>
+                <args>
+                    <module>Espressolabs_Productconfigurator</module>
+                    <frontName>espressoconfigurator</frontName>
+                </args>
+            </espressoconfigurator>
+        </routers>
+
+        <layout>
+            <updates>
+                <espressoconfigurator>
+                    <file>espressoconfigurator.xml</file>
+                </espressoconfigurator>
+            </updates>
+        </layout>
+
+        <translate>
+            <modules>
+                <Espressolabs_Productconfigurator>
+                    <files>
+                        <default>Espressolabs_Productconfigurator.csv</default>
+                    </files>
+                </Espressolabs_Productconfigurator>
+            </modules>
+        </translate>
+
+    </frontend>
+
+    <admin>
+        <routers>
+            <!--
+            <espressoconfigurator>
+                <use>admin</use>
+                <args>
+                    <module>Espressolabs_Productconfigurator</module>
+                    <frontName>espressoconfigurator</frontName>
+                </args>
+            </espressoconfigurator>
+            -->
+
+            <adminhtml>
+                <args>
+                    <modules>
+                        <espressoconfigurator before="Mage_Adminhtml">Espressolabs_Productconfigurator_Adminhtml</espressoconfigurator>
+                    </modules>
+                </args>
+            </adminhtml>
+
+        </routers>
+    </admin>
+
+    <global>
+        <models>
+            <espressoconfigurator>
+                <class>Espressolabs_Productconfigurator_Model</class>
+                <resourceModel>espressoconfigurator_mysql4</resourceModel>
+            </espressoconfigurator>
+        </models>
+
+        <blocks>
+            <espressoconfigurator>
+                <class>Espressolabs_Productconfigurator_Block</class>
+            </espressoconfigurator>
+
+            <checkout>
+                <rewrite>
+                    <cart_item_renderer>Espressolabs_Productconfigurator_Block_Checkout_Cart_Item_Renderer</cart_item_renderer>
+                </rewrite>
+            </checkout>
+
+            <sales>
+                <rewrite>
+                    <order_item_renderer_default>Espressolabs_Productconfigurator_Block_Order_Item_Renderer_Default</order_item_renderer_default>
+                    <order_email_items_default>Espressolabs_Productconfigurator_Block_Order_Email_Items_Default</order_email_items_default>
+                    <order_email_items_order_default>Espressolabs_Productconfigurator_Block_Order_Email_Items_Order_Default</order_email_items_order_default>
+                </rewrite>
+            </sales>
+
+            <adminhtml>
+                <rewrite>
+                    <catalog_product_grid>Espressolabs_Productconfigurator_Block_Adminhtml_Catalog_Product_Grid</catalog_product_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+
+        <helpers>
+            <espressoconfigurator>
+                <!-- This is where we define our helper directory -->
+                <class>Espressolabs_Productconfigurator_Helper</class>
+            </espressoconfigurator>
+        </helpers>
+
+        <resources>
+            <espressoconfigurator_setup>
+                <setup>
+                    <module>Espressolabs_Productconfigurator</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </espressoconfigurator_setup>
+            <espressoconfigurator_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </espressoconfigurator_write>
+            <espressoconfigurator_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </espressoconfigurator_read>
+        </resources>
+
+    </global>
+
+    <!-- define default configuration values -->
+    <default>
+        <esp_configurator_settings>
+            <preview_image>
+                <default_image_position>99</default_image_position>
+            </preview_image>
+            <texts>
+                <placeholder>My Label</placeholder>
+                <before_customization_btn_0>This product can be personalized.</before_customization_btn_0>
+                <before_customization_extra_costs>(extra price: [price])</before_customization_extra_costs>
+                <before_customization_btn_1>You have personalized this product.</before_customization_btn_1>
+                <btn_text_1>Customize it</btn_text_1>
+                <btn_text_2>Change customization</btn_text_2>
+            </texts>
+            <configurator_texts>
+                <title>Product Designer</title>
+                <before_customization_input>Your individual label</before_customization_input>
+                <btn_done>Done</btn_done>
+                <btn_reset>Reset</btn_reset>
+            </configurator_texts>
+            <checkout_texts>
+                <custom_label>Your label</custom_label>
+                <custom_font>Your font</custom_font>
+                <custom_color>Your color</custom_color>
+            </checkout_texts>
+            <fonts>
+                <configurator_fonts><![CDATA[a:14:{s:18:"_1457514600123_123";a:3:{s:10:"font_label";s:11:"Handwriting";s:8:"font_sku";s:11:"handwriting";s:11:"font_family";s:6:"Allura";}s:18:"_1457514627627_627";a:3:{s:10:"font_label";s:13:"Block letters";s:8:"font_sku";s:5:"block";s:11:"font_family";s:13:"Amaranth-Bold";}s:18:"_1457515605934_934";a:3:{s:10:"font_label";s:10:"Audio font";s:8:"font_sku";s:5:"audio";s:11:"font_family";s:9:"Audiowide";}s:18:"_1457515606662_662";a:3:{s:10:"font_label";s:13:"Computer font";s:8:"font_sku";s:8:"comupter";s:11:"font_family";s:13:"DroidSansMono";}s:18:"_1457515607214_214";a:3:{s:10:"font_label";s:5:"Comic";s:8:"font_sku";s:5:"comic";s:11:"font_family";s:9:"GochiHand";}s:18:"_1457515607782_782";a:3:{s:10:"font_label";s:15:"Cursive Elegant";s:8:"font_sku";s:7:"cursive";s:11:"font_family";s:10:"GreatVibes";}s:18:"_1457515608310_310";a:3:{s:10:"font_label";s:6:"Movies";s:8:"font_sku";s:6:"movies";s:11:"font_family";s:9:"Limelight";}s:18:"_1457515822952_952";a:3:{s:10:"font_label";s:9:"Newspaper";s:8:"font_sku";s:9:"newspaper";s:11:"font_family";s:4:"Lora";}s:18:"_1457515823799_799";a:3:{s:10:"font_label";s:12:"Bold letters";s:8:"font_sku";s:12:"bold-letters";s:11:"font_family";s:10:"PaytoneOne";}s:18:"_1457515824599_599";a:3:{s:10:"font_label";s:11:"Chalk board";s:8:"font_sku";s:10:"chalkboard";s:11:"font_family";s:15:"PermanentMarker";}s:18:"_1457515825399_399";a:3:{s:10:"font_label";s:9:"Architect";s:8:"font_sku";s:9:"architect";s:11:"font_family";s:15:"Quicksand-Light";}s:18:"_1457515866158_158";a:3:{s:10:"font_label";s:18:"Bold block letters";s:8:"font_sku";s:10:"block-bold";s:11:"font_family";s:6:"Roboto";}s:18:"_1457515866702_702";a:3:{s:10:"font_label";s:8:"Scribble";s:8:"font_sku";s:8:"scribble";s:11:"font_family";s:8:"RockSalt";}s:18:"_1457515867414_414";a:3:{s:10:"font_label";s:11:"Calligraphy";s:8:"font_sku";s:11:"calligraphy";s:11:"font_family";s:11:"RougeScript";}}]]></configurator_fonts>
+            </fonts>
+            <colors>
+                <active>0</active>
+                <!-- <configurator_colors><![CDATA[a:4:{i:0;a:2:{s:10:"color_code";s:7:"#ffab0a";s:11:"color_label";s:6:"yellow";}i:1;a:2:{s:10:"color_code";s:7:"#f6270d";s:11:"color_label";s:3:"red";}i:2;a:2:{s:10:"color_code";s:7:"#000000";s:11:"color_label";s:5:"black";}i:3;a:2:{s:10:"color_code";s:7:"#260df6";s:11:"color_label";s:4:"blue";}}]]></configurator_colors>-->
+                <configurator_colors><![CDATA[a:7:{i:0;a:3:{s:11:"color_label";s:6:"Yellow";s:9:"color_sku";s:6:"yellow";s:10:"color_code";s:7:"#ffab0a";}i:1;a:3:{s:11:"color_label";s:3:"Red";s:9:"color_sku";s:3:"red";s:10:"color_code";s:7:"#f6270d";}i:2;a:3:{s:11:"color_label";s:5:"Black";s:9:"color_sku";s:5:"black";s:10:"color_code";s:7:"#000000";}i:3;a:3:{s:11:"color_label";s:4:"Blue";s:9:"color_sku";s:4:"blue";s:10:"color_code";s:7:"#260df6";}s:18:"_1456853382221_221";a:3:{s:11:"color_label";s:5:"Green";s:9:"color_sku";s:5:"green";s:10:"color_code";s:7:"#0bd80e";}s:18:"_1456853386588_588";a:3:{s:11:"color_label";s:4:"Grey";s:9:"color_sku";s:4:"grey";s:10:"color_code";s:7:"#929292";}s:18:"_1457516676959_959";a:3:{s:11:"color_label";s:4:"Gold";s:9:"color_sku";s:4:"gold";s:10:"color_code";s:7:"#C7B27D";}}]]></configurator_colors>
+                <email_points>10</email_points>
+            </colors>
+            <option_generator>
+                <max_characters>20</max_characters>
+                <fonts>block, comic, cursive</fonts>
+                <colors>yellow, red, blue, green, grey, black</colors>
+                <price>5</price>
+            </option_generator>
+        </esp_configurator_settings>
+    </default>
+
+</config>

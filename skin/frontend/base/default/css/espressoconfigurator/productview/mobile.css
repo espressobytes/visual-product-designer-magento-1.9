@@ -1,0 +1,60 @@
+
+/*
+ * configurator styles in mobils
+ */
+
+#esp-configurator-bg {
+    /*top: -101px;*/
+}
+
+#esp-configurator-outer-wrapper {
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+}
+
+#esp-configurator-inner-wrapper {
+    /*margin: 0;*/
+}
+
+#esp-configurator-inner-content, #esp-configurator-upper-title {
+    padding: 10px;
+}
+
+/*
+ * preview-image:
+ */
+
+#esp-configurator-inner-content .esp-configurator-img-bg:before {
+    padding-top: 100%;
+    content: "";
+    display: block;
+}
+
+#esp-configurator-inner-content .esp-configurator-img-bg {
+    position: relative;
+    width: 100%;
+    height: initial;
+    background-size: 100%;
+}
+
+#esp-configurator-inner-content #esp-configurator-text {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 100%;
+    /*font-size: 20px;*/
+    font-size: 7vw;
+    margin-top: -5vw;
+}
+
+.font-fieldset li {
+    width: 32%;
+}
+
+.font-fieldset li:last-child {
+    margin-right: 0;
+}

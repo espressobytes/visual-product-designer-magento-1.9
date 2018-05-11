@@ -1,0 +1,249 @@
+/*
+ * product detail-page
+ */
+
+#product-customization-before-btn {
+    clear: both;
+    /*padding-top: 10px;*/
+}
+
+#product-customization-before-btn ul {
+    color: rgb(121, 121, 121);
+}
+
+#product-customization-before-btn dt {
+    float: left;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+#product-customization-before-btn dd {
+    padding: 0 0 4px 0;
+    margin: 0.2em 0 0;
+    border: none;
+}
+
+.product-view .product-customization-btn-wrapper {
+    padding-top: 10px;
+    clear:both;
+}
+
+/*
+.product-view .product-customization-btn-wrapper button {
+    background-color: rgb(85, 172, 238);
+}
+*/
+
+/*
+ * configurator design
+ */
+
+#esp-configurator-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display:none;
+}
+
+#esp-configurator-bg-dark-overlay {
+    background: rgba(39, 46, 56, 0.59);
+    width: 100%;
+    height: 100%;
+    z-index: 1010;
+}
+
+#esp-configurator-outer-wrapper {
+    /*margin: 50px auto;*/
+    max-width: 550px;
+    /*max-height: 500px;*/
+    display:none;
+
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -250px;
+    margin-right: auto;
+    z-index: 1020;
+}
+
+#esp-configurator-inner-wrapper {
+    margin: 10px 10px 0 10px;
+}
+
+#esp-configurator-inner-content, #esp-configurator-upper-title {
+    background: white;
+    padding: 20px;
+}
+
+#esp-configurator-upper-title {
+    /*border: 1px solid rgb(233, 88, 154);*/
+    /*border: 1px solid;*/
+    border-bottom: 1px solid rgb(211, 211, 211);
+    font-weight: bold;
+    /*margin: 10px 10px 0 10px;*/
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 14px;
+    /*padding-top: 10px;*/
+}
+
+#esp-close-btn {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#esp-close-btn:hover {
+    text-decoration: none;
+}
+
+#esp-configurator-inner-content {
+    /*margin: 0 10px;*/
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /*border: 1px solid rgb(233, 88, 154);*/
+    /*border: 1px solid;*/
+    border-top: none;
+}
+
+#esp-configurator-inner-content .esp-configurator-img-bg {
+    background-color: white;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    border: 1px solid rgb(211, 211, 211);
+    background-size: 450px 450px;
+    width: 450px;
+    height: 450px;
+}
+
+#esp-configurator-inner-content #esp-configurator-text {
+    position: relative;
+    /*top: 199px;*/
+    top: 50%;
+    /*left: 100px;*/
+    /*width: 250px;*/
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    margin-top: -26px;
+    white-space: nowrap;
+}
+
+
+/*
+ * input field
+ */
+
+.esp-configurator-controls {
+    padding: 10px;
+    padding-top: 5px;
+    border: 1px solid rgb(211, 211, 211);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.esp-configurator-controls .customization-labels {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.esp-configurator-controls #input-text {
+    font-family: Arial, Helvetica, Sans Serif;
+    width: 100%;
+    height: 30px;
+    padding: 2px 6px;
+    vertical-align: middle;
+    border: 1px solid grey;
+    background-color: rgb(235, 235, 235);
+    font-size: 14px;
+}
+
+.esp-below-input {
+    font-size: 12px;
+}
+
+.esp-below-input #esp-validation-msg {
+    color: red;
+    display: none;
+}
+
+/*
+ * font and color selector
+ */
+
+.esp-configurator-controls fieldset ul {
+    list-style: none;
+}
+.esp-configurator-controls fieldset li {
+    float: left;
+    display: inline;
+    padding: 0px;
+}
+.esp-configurator-controls fieldset.esp-font li {
+    margin-right: 0.3em;
+    width: 20%;
+}
+.esp-configurator-controls fieldset.esp-font-colors {
+    margin-top: 0.4em;
+}
+.esp-configurator-controls fieldset.esp-font-colors li {
+    margin-right: 5px;
+    width: 9%;
+    min-width: 30px;
+}
+
+.esp-configurator-controls fieldset li:hover {
+    background-color: rgb(238, 238, 238);
+}
+.esp-configurator-controls fieldset input {
+    visibility:hidden;
+    display:none;
+}
+.esp-configurator-controls fieldset label {
+    border: 1px solid rgb(128, 128, 128);
+    cursor: pointer;
+    /* padding: 4px; */
+    text-align: center;
+    font-size: 25px;
+    line-height: 34px;
+    width: 100%;
+    display: inline-block;
+    /* height: 100%; */
+    color: rgb(62, 62, 62);
+    height: 35px;
+    vertical-align: middle;
+}
+.esp-configurator-controls fieldset label div {
+    height: 100%;
+    overflow: hidden;
+}
+.esp-configurator-controls fieldset input:checked + label {
+    background: rgb(175, 175, 175);
+    color: rgb(39, 39, 39);
+    /*border-color: rgb(233, 88, 154);*/
+    border: 1px solid rgb(39, 39, 39);
+}
+.esp-configurator-controls fieldset input:checked + label div {
+    border: 1px solid rgb(255, 255, 255);
+}
+
+
+/*
+ * buttons
+ */
+
+.esp-configurator-buttons button {
+    float:right;
+    margin-left: 10px;
+}
+
+/*button#product-customize-reset {*/
+    /*background-color: rgb(96, 109, 120);*/
+/*}*/
+
+button#product-customize-reset:hover {
+    opacity: .7;
+}

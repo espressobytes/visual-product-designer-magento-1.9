@@ -1,0 +1,9 @@
+<?xml version = "1.0"?>
+<config>
+    <modules>
+        <Espressolabs_Productconfigurator>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Espressolabs_Productconfigurator>
+    </modules>
+</config>

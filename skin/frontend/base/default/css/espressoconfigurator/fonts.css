@@ -1,0 +1,177 @@
+/*
+ * set up new font-faces, that are used in the product configurator
+ */
+
+/*
+ * *********************************************************************************************************************
+ * google fonts:
+ * *********************************************************************************************************************
+ */
+
+@font-face {
+    font-family: 'Allura';
+    src:
+    url('fonts/Allura-Regular/Allura-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Allura-Regular/Allura-Regular.eot') format('embedded-opentype'),
+    url('fonts/Allura-Regular/Allura-Regular.ttf')  format('truetype'),
+    url('fonts/DINCond-Regular.woff') format('woff')
+    ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amaranth-Bold';
+    src:
+            url('fonts/Amaranth-Bold/Amaranth-Bold.eot?#iefix') format('embedded-opentype'),
+            url('fonts/Amaranth-Bold/Amaranth-Bold.eot') format('embedded-opentype'),
+            url('fonts/Amaranth-Bold/Amaranth-Bold.ttf')  format('truetype'),
+            url('fonts/DINCond-Regular.woff') format('woff')
+;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Audiowide';
+    src:
+            url('fonts/Audiowide-Regular/Audiowide-Regular.eot?#iefix') format('embedded-opentype'),
+            url('fonts/Audiowide-Regular/Audiowide-Regular.eot') format('embedded-opentype'),
+            url('fonts/Audiowide-Regular/Audiowide-Regular.ttf')  format('truetype'),
+            url('fonts/DINCond-Regular.woff') format('woff')
+;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DroidSansMono';
+    src:
+            url('fonts/DroidSansMono/DroidSansMono.eot?#iefix') format('embedded-opentype'),
+            url('fonts/DroidSansMono/DroidSansMono.eot') format('embedded-opentype'),
+            url('fonts/DroidSansMono/DroidSansMono.ttf')  format('truetype'),
+            url('fonts/DINCond-Regular.woff') format('woff')
+;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GochiHand';
+    src:
+            url('fonts/GochiHand-Regular/GochiHand-Regular.eot?#iefix') format('embedded-opentype'),
+            url('fonts/GochiHand-Regular/GochiHand-Regular.eot') format('embedded-opentype'),
+            url('fonts/GochiHand-Regular/GochiHand-Regular.ttf')  format('truetype'),
+            url('fonts/DINCond-Regular.woff') format('woff')
+;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GreatVibes';
+    src:
+            url('fonts/GreatVibes-Regular/GreatVibes-Regular.eot?#iefix') format('embedded-opentype'),
+            url('fonts/GreatVibes-Regular/GreatVibes-Regular.eot') format('embedded-opentype'),
+            url('fonts/GreatVibes-Regular/GreatVibes-Regular.ttf')  format('truetype'),
+            url('fonts/DINCond-Regular.woff') format('woff')
+;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Limelight';
+    src:
+            url('fonts/Limelight-Regular/Limelight-Regular.eot?#iefix') format('embedded-opentype'),
+            url('fonts/Limelight-Regular/Limelight-Regular.eot') format('embedded-opentype'),
+            url('fonts/Limelight-Regular/Limelight-Regular.ttf')  format('truetype'),
+            url('fonts/DINCond-Regular.woff') format('woff')
+;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src:
+            url('fonts/Lora-Regular/Lora-Regular.eot?#iefix') format('embedded-opentype'),
+            url('fonts/Lora-Regular/Lora-Regular.eot') format('embedded-opentype'),
+            url('fonts/Lora-Regular/Lora-Regular.ttf')  format('truetype'),
+            url('fonts/DINCond-Regular.woff') format('woff')
+;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PaytoneOne';
+    src:
+            url('fonts/PaytoneOne/PaytoneOne.eot?#iefix') format('embedded-opentype'),
+            url('fonts/PaytoneOne/PaytoneOne.eot') format('embedded-opentype'),
+            url('fonts/PaytoneOne/PaytoneOne.ttf')  format('truetype'),
+            url('fonts/DINCond-Regular.woff') format('woff')
+;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PermanentMarker';
+    src:
+            url('fonts/PermanentMarker/PermanentMarker.eot?#iefix') format('embedded-opentype'),
+            url('fonts/PermanentMarker/PermanentMarker.eot') format('embedded-opentype'),
+            url('fonts/PermanentMarker/PermanentMarker.ttf')  format('truetype'),
+            url('fonts/DINCond-Regular.woff') format('woff')
+;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand-Light';
+    src:
+            url('fonts/Quicksand-Light/Quicksand-Light.eot?#iefix') format('embedded-opentype'),
+            url('fonts/Quicksand-Light/Quicksand-Light.eot') format('embedded-opentype'),
+            url('fonts/Quicksand-Light/Quicksand-Light.ttf')  format('truetype'),
+            url('fonts/DINCond-Regular.woff') format('woff')
+;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:
+            url('fonts/Roboto-Medium/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+            url('fonts/Roboto-Medium/Roboto-Medium.eot') format('embedded-opentype'),
+            url('fonts/Roboto-Medium/Roboto-Medium.ttf')  format('truetype'),
+            url('fonts/DINCond-Regular.woff') format('woff')
+;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RockSalt';
+    src:
+            url('fonts/RockSalt/RockSalt.eot?#iefix') format('embedded-opentype'),
+            url('fonts/RockSalt/RockSalt.eot') format('embedded-opentype'),
+            url('fonts/RockSalt/RockSalt.ttf')  format('truetype'),
+            url('fonts/DINCond-Regular.woff') format('woff')
+;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RougeScript';
+    src:
+            url('fonts/RougeScript-Regular/RougeScript-Regular.eot?#iefix') format('embedded-opentype'),
+            url('fonts/RougeScript-Regular/RougeScript-Regular.eot') format('embedded-opentype'),
+            url('fonts/RougeScript-Regular/RougeScript-Regular.ttf')  format('truetype'),
+            url('fonts/DINCond-Regular.woff') format('woff')
+;
+    font-weight: normal;
+    font-style: normal;
+}

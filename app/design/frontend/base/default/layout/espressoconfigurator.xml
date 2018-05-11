@@ -1,0 +1,42 @@
+
+<layout version="0.1.0">
+
+    <catalog_product_view>
+
+        <!-- add css and js -->
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/espressoconfigurator/productview/general.css</stylesheet></action>
+            <!-- original:
+            <action method="addCss"><stylesheet>css/espressoconfigurator/productview/tablet.css</stylesheet><params>media="only screen and (min-width:720px) and (max-width: 985px)"</params></action>
+            <action method="addCss"><stylesheet>css/espressoconfigurator/productview/mobile.css</stylesheet><params>media="only screen and (max-width:719px)"</params></action>
+            -->
+            <!-- changed due to mobile issues: -->
+            <action method="addCss"><stylesheet>css/espressoconfigurator/productview/tablet.css</stylesheet><params>media="only screen and (min-width:513px) and (max-width: 985px)"</params></action>
+            <action method="addCss"><stylesheet>css/espressoconfigurator/productview/mobile.css</stylesheet><params>media="only screen and (max-width:512px)"</params></action>
+
+            <action method="addCss"><stylesheet>css/espressoconfigurator/productview/mobile-portrait.css</stylesheet><params>media="only screen and (max-width:479px)"</params></action>
+            <action method="addCss"><stylesheet>css/espressoconfigurator/store-styles.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/espressoconfigurator/fonts.css</stylesheet></action>
+            <action method="addJs"><file>espressoconfigurator/productconfigurator.js</file></action>
+    </reference>
+
+    <!-- use name="product.info.extrahint" if you want to let the configurator-button appear below the add to cart - box -->
+        <!-- <reference name="product.info.extrahint"> -->
+        <reference name="product.info.options.wrapper">
+            <block type="espressoconfigurator/catalog_product_button" name="esp_configurator_btn" as="esp_configurator_btn" template="espressoconfigurator/catalog/product/view/button.phtml">
+                <block type="core/template" name="esp_configurator_styles" as="esp_configurator_styles" template="espressoconfigurator/catalog/product/view/button/styles.phtml" />
+            </block>
+        </reference>
+
+        <reference name="product.info.options">
+            <action method="setTemplate">
+                <template>espressoconfigurator/catalog/product/view/options.phtml</template>
+            </action>
+        </reference>
+
+    </catalog_product_view>
+
+</layout>
+
+
+

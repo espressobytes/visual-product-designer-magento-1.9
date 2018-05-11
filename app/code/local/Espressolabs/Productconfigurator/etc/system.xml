@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+
+<config>
+    <tabs>
+        <espressolabs_extensions>
+            <label>Espressolabs</label>
+            <sort_order>150</sort_order>
+        </espressolabs_extensions>
+    </tabs>
+
+    <sections>
+        <esp_configurator_settings>
+            <!-- <class>separator-top</class> -->
+            <label>Visual Product Designer</label>
+            <tab>espressolabs_extensions</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+
+                <preview_image>
+                    <label>Background image of configurator preview</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+                        <default_image translate="label comment">
+                            <label>Default Background Image</label>
+                            <comment>If not det in the product, this image will be shown in the configurator.</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">product-configurator</upload_dir>
+                            <base_url type="media" scope_info="1">product-configurator</base_url>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default_image>
+
+                        <default_image_position>
+                            <label>Image Position in Product</label>
+                            <comment>If default image should not be used, define an image position in the Article itself (Default is 99)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default_image_position>
+
+                    </fields>
+                </preview_image>
+
+                <texts>
+                    <label>Text items on product view</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>200</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+                        <placeholder translate="label comment">
+                            <label>Default placeholder text</label>
+                            <comment></comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </placeholder>
+
+                        <before_customization_btn_0 translate="label comment">
+                            <label>Text before button (if product is not customized yet)</label>
+                            <comment></comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </before_customization_btn_0>
+
+                        <before_customization_extra_costs translate="label comment">
+                            <label>Text for extra costs</label>
+                            <comment>Use [price] as an identifier for the extra-costs of the individualization. For example: '(Extra price: [price])'</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </before_customization_extra_costs>
+
+                        <before_customization_btn_1>
+                            <label>Text before button (If product is already customized)</label>
+                            <comment></comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>52</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </before_customization_btn_1>
+
+                        <btn_text_1>
+                            <label>Button-text (Customize it)</label>
+                            <comment>If product is not customized yet</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </btn_text_1>
+
+                        <btn_text_2>
+                            <label>Button-text (Change customization)</label>
+                            <comment>If product is already customized</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>61</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </btn_text_2>
+
+                    </fields>
+                </texts>
+
+                <configurator_texts>
+                    <label>Text items in configurator pop up</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>210</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+                        <title translate="label comment">
+                            <label>Title of configurator</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+
+                        <before_customization_input>
+                            <label>Text before customization</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>61</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </before_customization_input>
+
+                        <btn_done>
+                            <label>Button-text (done)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>61</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </btn_done>
+
+                        <btn_done>
+                            <label>Button-text (reset)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>61</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </btn_done>
+
+                    </fields>
+                </configurator_texts>
+
+                <checkout_texts>
+                    <label>Text items in checkout</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>210</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+
+                    <fields>
+
+                        <custom_label translate="label comment">
+                            <label>Text for 'Your customization text'</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom_label>
+
+                        <custom_font translate="label comment">
+                            <label>Text for 'Choosen font'</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom_font>
+
+                        <custom_color translate="label comment">
+                            <label>Text for 'Choosen color'</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom_color>
+
+                    </fields>
+
+                </checkout_texts>
+
+                <fonts>
+                    <label>Fonts</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>300</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <configurator_fonts translate="label comment">
+                            <label>Fonts used by the configurator (font-family)</label>
+                            <comment>To add new css font-families, you have to edit the file skin/frontend/base/default/css/espressoconfigurator/fonts.css</comment>
+                            <!--<frontend_model>sweetmonkey/adminhtml_system_config_form_field_mapfields</frontend_model>-->
+                            <frontend_model>espressoconfigurator/adminhtml_systemconfigsource_fontfields</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </configurator_fonts>
+                    </fields>
+                </fonts>
+
+                <colors>
+                    <label>Colors</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>400</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <configurator_colors translate="label comment">
+                            <label>Colors used by the configurator</label>
+                            <!--<frontend_model>sweetmonkey/adminhtml_system_config_form_field_mapfields</frontend_model>-->
+                            <frontend_model>espressoconfigurator/adminhtml_systemconfigsource_colorfields</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </configurator_colors>
+                    </fields>
+                </colors>
+
+                <option_generator>
+                    <label>Generator for individual options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>900</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+                        <max_characters>
+                            <label>Max. number of characters</label>
+                            <comment>Define maximum number of characters in configurator</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </max_characters>
+
+                        <fonts>
+                            <label>Fonts</label>
+                            <comment>Seperate font-skus with commas (like: 'block,cursive,comic'). If left empty, no choice for fonts will be created.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fonts>
+
+                        <colors>
+                            <label>Colors</label>
+                            <comment>Seperate color-skus with commas of their skus (like: 'red,yellow,green'). If left empty, no choice for different colors will be created.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </colors>
+
+                        <price>
+                            <label>Price</label>
+                            <comment>Define a price for the customization.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </price>
+
+                    </fields>
+
+                </option_generator>
+
+            </groups>
+        </esp_configurator_settings>
+    </sections>
+
+</config>

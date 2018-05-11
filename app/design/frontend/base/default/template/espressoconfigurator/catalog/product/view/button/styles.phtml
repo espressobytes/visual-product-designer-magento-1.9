@@ -1,0 +1,48 @@
+<?php
+
+
+$configFonts = $this->getParentBlock()->getConfigFonts();
+$configColors = $this->getParentBlock()->getConfigColors();
+
+?>
+
+<style>
+
+    /*
+    * Define classes for labels in configurator
+    */
+
+    <? foreach ($configFonts as $fontKey => $myFont ): ?>
+    .font-picker-label-<? echo ($myFont['font_sku']); ?>, #esp-configurator-text.font-<? echo ($myFont['font_sku']); ?> {
+        font-family: <? echo ($myFont['font_family']); ?>;
+    }
+    <? endforeach ?>
+
+    /*
+    .font-picker-label-font1, #esp-configurator-text.font-font1 {
+        font-family: DINCond-Bold, "Arial Black", Gadget, sans-serif;
+    }
+
+    .font-picker-label-font2, #esp-configurator-text.font-font2 {
+        font-family: BrushScriptMT-Italic, cursive, sans-serif;
+    }
+
+    .font-picker-label-font3, #esp-configurator-text.font-font3 {
+        font-family: Noteworthy-Bold, cursive, sans-serif;
+    }
+    */
+
+    /*
+     * Define classes for color-picker
+     */
+
+    <? foreach ($configColors as $colorKey => $myColor ): ?>
+    #esp-configurator-text.color-<? echo ($myColor['color_sku']); ?> {
+        color: <? echo ($myColor['color_code']) ?> ;
+    }
+    <? endforeach ?>
+
+</style>
+
+
+

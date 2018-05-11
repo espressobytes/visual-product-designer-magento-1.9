@@ -1,0 +1,39 @@
+/*
+ * Product configurator
+ */
+
+/* border color outside */
+#esp-configurator-inner-wrapper {
+    border: 1px solid rgb(51, 153, 204);
+}
+
+/* close button top right side */
+#esp-close-btn {
+    color: rgb(51, 153, 204);
+}
+
+/* button: done */
+.esp-configurator-buttons button#product-customize-done {
+    background-color: rgb(51, 153, 204);
+}
+
+/* button: reset */
+.esp-configurator-buttons button#product-customize-reset {
+    background-color: rgb(96, 109, 120);
+}
+
+/* button color */
+/*
+fieldset.esp-font input:checked + label {
+    border: 1px solid rgb(51, 153, 204);
+}
+*/
+
+.product-view .product-customization-btn-wrapper button {
+    background-color: rgb(241, 92, 34);
+}
+
+
+
+
+
